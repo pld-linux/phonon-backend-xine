@@ -5,7 +5,7 @@ Summary:	Xine backend for Phonon
 Summary(pl.UTF-8):	Wtyczka Xine dla Phonona
 Name:		phonon-backend-xine
 Version:	4.4.4
-Release:	1
+Release:	2
 License:	LGPL 2.1
 Group:		Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/stable/phonon/%{name}/%{version}/src/%{name}-%{version}.tar.bz2
@@ -48,6 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+mv $RPM_BUILD_ROOT%{_iconsdir}/{oxygen,hicolor}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -55,3 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/kde4/plugins/phonon_backend/phonon_xine.so
 %{_datadir}/kde4/services/phononbackends/xine.desktop
+%{_iconsdir}/hicolor/*/apps/*.png
+%{_iconsdir}/hicolor/*/apps/*.svgz
