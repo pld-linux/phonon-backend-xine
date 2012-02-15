@@ -5,7 +5,9 @@ Summary:	Xine backend for Phonon
 Summary(pl.UTF-8):	Wtyczka Xine dla Phonona
 Name:		phonon-backend-xine
 Version:	4.4.4
-Release:	3
+# looks heavily broken and no longer maintained
+# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=656920
+Release:	3.1
 License:	LGPL 2.1
 Group:		Libraries
 Source0:	ftp://ftp.kde.org/pub/kde/stable/phonon/%{name}/%{version}/src/%{name}-%{version}.tar.bz2
